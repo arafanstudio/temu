@@ -1,5 +1,5 @@
 import { supabase } from './supabase'
-import { Couple, Payment, Template, CreateInvitationRequest } from '@/types'
+import { Couple, Guest, Payment, Template, CreateInvitationRequest } from '@/types'
 import { generateCoupleSlug, generateGuestSlug } from '@/utils/slug'
 import { v4 as uuidv4 } from 'uuid'
 

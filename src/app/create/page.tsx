@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Heart, ArrowLeft, ArrowRight, Check, Users } from 'lucide-react'
+import { Heart, ArrowLeft, ArrowRight, Check, Users, Calendar, MapPin, User } from 'lucide-react'
 import { Template, CreateInvitationRequest } from '@/types'
 
 export default function CreatePage() {

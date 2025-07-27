@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
+import TemplateEngine, { TemplateData } from '@/utils/templateEngine'
 
 // Sample data for preview
 const sampleData: TemplateData = {

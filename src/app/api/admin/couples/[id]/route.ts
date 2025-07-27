@@ -26,7 +26,7 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
     }
 
     return NextResponse.json({ success: true });
-  } catch (error: Error) {
+  } catch (error: any) {
     console.error('Unhandled error in delete couple API:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });
   }

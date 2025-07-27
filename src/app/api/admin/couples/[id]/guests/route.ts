@@ -21,7 +21,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     }
 
     return NextResponse.json({ success: true, data: guests });
-  } catch (error: Error) {
+  } catch (error: any) {
     console.error('Unhandled error in get guests API:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });
   }

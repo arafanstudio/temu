@@ -1,19 +1,18 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Heart, Check, X, Eye, Users, CreditCard, Trash2, Copy, Image } from 'lucide-react'
-import { Couple, Payment, Guest } from '@/types'
+import { Heart, Check, X, Eye, Users, CreditCard, Calendar, MapPin, User, Trash2, Link as LinkIcon, Copy, Image } from 'lucide-react'
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [password, setPassword] = useState('')
-  const [couples, setCouples] = useState<Couple[]>([])
-  const [pendingPayments, setPendingPayments] = useState<Payment[]>([])
+  const [couples, setCouples] = useState<any[]>([])
+  const [pendingPayments, setPendingPayments] = useState<any[]>([])
   const [selectedTab, setSelectedTab] = useState('pending')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [expandedCoupleId, setExpandedCoupleId] = useState<string | null>(null);
-  const [coupleGuests, setCoupleGuests] = useState<{ [key: string]: Guest[] }>({});
+  const [coupleGuests, setCoupleGuests] = useState<{ [key: string]: any[] }>({});
   const [selectedImageUrl, setSelectedImageUrl] = useState<string | null>(null);
 
   // Load data from database when authenticated

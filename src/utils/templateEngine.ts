@@ -53,14 +53,14 @@ export class TemplateEngine {
           try {
             const customConfig = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
             config = { ...config, ...customConfig }
-          } catch (err) {
-            console.warn(`Failed to load config for template ${templateName}:`, err)
+          } catch (error) {
+            console.warn(`Failed to load config for template ${templateName}:`, error)
           }
         }
 
         return config
       })
-    } catch (err) {
+    } catch (error) {
       console.error('Failed to get available templates:', error)
       return []
     }
@@ -83,7 +83,7 @@ export class TemplateEngine {
       htmlContent = this.replaceTokens(htmlContent, data)
       
       return htmlContent
-    } catch (err) {
+    } catch (error) {
       console.error(`Failed to render template ${templateName}:`, error)
       throw error
     }
@@ -106,7 +106,7 @@ export class TemplateEngine {
       if (fs.existsSync(jsPath)) {
         assets.js = fs.readFileSync(jsPath, 'utf-8')
       }
-    } catch (err) {
+    } catch (error) {
       console.error(`Failed to get assets for template ${templateName}:`, error)
     }
     
@@ -155,7 +155,7 @@ export class TemplateEngine {
         const filePath = path.join(templateDir, file)
         return fs.existsSync(filePath)
       })
-    } catch (err) {
+    } catch (error) {
       console.error(`Failed to validate template ${templateName}:`, error)
       return false
     }
@@ -173,7 +173,7 @@ export class TemplateEngine {
         month: 'long',
         day: 'numeric'
       })
-    } catch (err) {
+    } catch (error) {
       return dateString
     }
   }
