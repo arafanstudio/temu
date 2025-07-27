@@ -3,19 +3,19 @@
 
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
-import { Heart, Calendar, MapPin, Clock, User, Share2, Copy, CheckCircle } from 'lucide-react'
+import { Heart, Calendar, MapPin, Clock, Copy, CheckCircle } from 'lucide-react'
+import { InvitationData } from '@/types'
 
 export default function InvitationPage() {
   const params = useParams()
   const { coupleSlug, guestSlug } = params
-  const [invitationData, setInvitationData] = useState<any>(null)
+  const [invitationData, setInvitationData] = useState<InvitationData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
   const [rsvpStatus, setRsvpStatus] = useState<"attending" | "not-attending" | null>(null)
   const [templateContent, setTemplateContent] = useState<{ html: string; css: string; js: string } | null>(null)
   const [templateName, setTemplateName] = useState<string | null>(null)
-
   const fetchTemplateContent = async (templateName: string, couple: any, guest: any) => {
     try {
       // Create template data using TemplateEngine format

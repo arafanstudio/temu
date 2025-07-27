@@ -53,7 +53,7 @@ export async function GET(request: Request, { params }: { params: { coupleSlug: 
     }
 
     return NextResponse.json({ success: true, data: { couple: coupleData, guest: guestData } });
-  } catch (error: any) {
+  } catch (error: Error) {
     console.error('Unhandled error in invitation API:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });
   }

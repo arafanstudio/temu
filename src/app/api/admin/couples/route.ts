@@ -18,7 +18,7 @@ export async function GET(request: Request) {
     }
 
     return NextResponse.json({ success: true, data: couples });
-  } catch (error: any) {
+  } catch (error: Error) {
     console.error('Unhandled error in get couples API:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });
   }

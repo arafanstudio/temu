@@ -3,7 +3,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Heart, ArrowLeft, Upload, Check, CreditCard, Smartphone, AlertCircle } from 'lucide-react'
 
 export default function PaymentPage() {

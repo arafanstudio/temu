@@ -78,7 +78,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ success: true, coupleId: coupleId, coupleSlug: coupleSlug });
-  } catch (error: any) {
+  } catch (error: Error) {
     console.error('Unhandled error in create-invitation API:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });
   }

@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase'
 export async function GET() {
   try {
     // Test basic connection
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('couples')
       .select('count')
       .limit(1)
@@ -19,7 +19,7 @@ export async function GET() {
     }
 
     // Test if tables exist
-    const { data: tablesData, error: tablesError } = await supabase
+    const { error: tablesError } = await supabase
       .rpc('get_table_info')
       .select()
 
