@@ -1,0 +1,461 @@
+/* Classic Traditional Template Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: #3a3a3a;
+    background: #f8f6f0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    background: linear-gradient(135deg, #f8f6f0 0%, #e8e2d4 100%);
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 177, 153, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.invitation-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 60px 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.ornament-top,
+.ornament-bottom {
+    color: #d4af37;
+    margin: 20px 0;
+}
+
+.ornament-svg {
+    width: 200px;
+    height: 50px;
+}
+
+.card-header {
+    margin: 30px 0 40px 0;
+}
+
+.invitation-text {
+    font-size: 1.1rem;
+    color: #6b6b6b;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.guest-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 20px 0;
+    letter-spacing: 0.02em;
+}
+
+.invitation-subtitle {
+    font-size: 1rem;
+    color: #6b6b6b;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.couple-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.groom-name,
+.bride-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 0.02em;
+}
+
+.heart-ornament {
+    color: #d4af37;
+}
+
+.heart-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Event Details */
+.event-details {
+    padding: 80px 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ornament-divider {
+    color: #d4af37;
+    margin: 15px 0;
+}
+
+.divider-svg {
+    width: 100px;
+    height: 20px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.detail-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: #f8f6f0;
+    border: 1px solid #e8e2d4;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.detail-icon {
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.detail-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.detail-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.detail-value {
+    font-size: 1.2rem;
+    color: #3a3a3a;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.detail-address {
+    font-size: 1rem;
+    color: #6b6b6b;
+    font-style: italic;
+}
+
+/* RSVP Section */
+.rsvp-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    text-align: center;
+}
+
+.rsvp-section .section-title {
+    color: white;
+}
+
+.rsvp-section .ornament-divider {
+    color: #d4af37;
+}
+
+.rsvp-subtitle {
+    font-size: 1.2rem;
+    margin: 30px 0 40px 0;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.rsvp-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.rsvp-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 35px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    font-family: 'Lora', serif;
+}
+
+.rsvp-btn.attending {
+    background: #27ae60;
+    color: white;
+    border-color: #27ae60;
+}
+
+.rsvp-btn.attending:hover {
+    background: #2ecc71;
+    border-color: #2ecc71;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+}
+
+.rsvp-btn.not-attending {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.rsvp-btn.not-attending:hover {
+    background: white;
+    color: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.rsvp-message {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    display: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rsvp-message.success {
+    background: rgba(46, 204, 113, 0.2);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    color: #27ae60;
+}
+
+.rsvp-message.error {
+    background: rgba(231, 76, 60, 0.2);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    color: #e74c3c;
+}
+
+/* Actions Section */
+.actions-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 20px;
+    background: #f8f6f0;
+    border: 2px solid #e8e2d4;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #3a3a3a;
+    font-family: 'Lora', serif;
+}
+
+.action-btn:hover {
+    background: white;
+    border-color: #d4af37;
+    color: #2c3e50;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.action-icon {
+    color: #d4af37;
+}
+
+.action-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+}
+
+.footer-ornament {
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.footer-couple {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #d4af37;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guest-name {
+        font-size: 2.2rem;
+    }
+    
+    .groom-name,
+    .bride-name {
+        font-size: 2.5rem;
+    }
+    
+    .couple-names {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .invitation-card {
+        padding: 40px 30px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .details-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .rsvp-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .rsvp-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .actions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px 10px;
+    }
+    
+    .invitation-card {
+        padding: 30px 20px;
+    }
+    
+    .guest-name {
+        font-size: 2rem;
+    }
+    
+    .groom-name,
+    .bride-name {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .detail-item {
+        padding: 30px 20px;
+    }
+    
+    .ornament-svg {
+        width: 150px;
+        height: 40px;
+    }
+}
+
